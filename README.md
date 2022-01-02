@@ -25,3 +25,11 @@ Too have a Dedicated place were all the Bugs and or Ideas Belong to
 
 * Node.js: Yeah its js and i like js
 * Express: Im the most familiar with + i've written several little helpers for this Lib
+
+## Todo
+* [ ] Model the Database
+* [ ] Create Express App & Setup a basic app
+* [ ] Bring in mysql
+* [ ] Think about the routing
+* [ ] Setup the Tables
+* [ ] Setup the routes
