@@ -18,7 +18,7 @@ To have a DEDICATED place where all the tickets are stored
 
 ## Tech Stack substantiation
 
-* Vue: As it is my favorite Framework and im familiar with it
+* Vue: As it is my favorite Framework and im most familiar with it besides to React Angular or Svelte
 * Vuex: It is an Official State Managment Plugin for Vue similar to Redux in React
 * Vue-Router: Same as for Vuex Official Routing System
 * Bootstrap: Its an nice, easy and memorizable Style Library
