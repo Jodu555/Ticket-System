@@ -53,3 +53,6 @@ So the tickets can also displayed on the HostingSystem UI for example
 * [ ] Think about the routing
 * [ ] Setup the Tables
 * [ ] Setup the routes
+
+## ERM - Entity Relation Model
+![This is the current ERM](https://images.jodu555.de/001cd38c-c3fd-47ac-b833-a5e178499d49.png "This is the current ERM")
