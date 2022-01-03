@@ -13,6 +13,19 @@ To have a DEDICATED place where all the tickets are stored
 * The Idea is to use this as a Rest API and pass a UUID to a ticket so it can determent the user
 So the tickets can also displayed on the HostingSystem UI for example
 
+## MVP
+* Standalone Software
+    * Login
+    * Ticket-System
+    * Realtime functionality
+* Standalone UI
+    * Live Chat in Ticket
+    * View / Create Ticket
+    * Login
+
+## Stretch
+* Custom Vue Components to integrate in other projects
+* Any Simplified realtime abillity
 
 ## Tech Stack
 * Front-end: Vue.js + Vuex + Vue-Router + Bootstrap
