@@ -7,9 +7,12 @@ To Manage / Fix and Cartegorize all kinds of Bugs or whatever with an Integratio
 Especially the Ez-Uploader, my Personal Website, the Hosting-System, the github-information-api
 Too have a Dedicated place were all the Bugs and or Ideas Belong to
 
-## Think
+## Think - User Tracking
 Think of a way to implement this also in the hoster system without a new account! 
 To have a DEDICATED place where all the tickets are stored
+* The Idea is to use this as a Rest API and pass a UUID to a ticket so it can determent the user
+So the tickets can also displayed on the HostingSystem UI for example
+
 
 ## Tech Stack
 * Front-end: Vue.js + Vuex + Vue-Router + Bootstrap
