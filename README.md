@@ -48,9 +48,11 @@ So the tickets can also displayed on the HostingSystem UI for example
 
 ## Todo
 * [ ] Model the Database
-* [ ] Create Express App & Setup a basic app
-* [ ] Bring in mysql
+* [x] Create Express App & Setup a basic app
+* [x] Bring in mysql
 * [ ] Think about the routing
+* [ ] Think about if everything should be realtime
+    * [ ] No fetch's etc.
 * [ ] Setup the Tables
 * [ ] Setup the routes
 
