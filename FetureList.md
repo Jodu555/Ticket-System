@@ -28,3 +28,9 @@ Yeah This list is mostly in german! I just wnated to write down all my thoughts 
     - Discord Integration for new Tickets
     - Anhängen von Bildern oder Dateien
 
+Inspiration:
+* https://www.onetoone.de/cgi-bin/resize/upload/bilder/oto_29627.png?maxwidth=1200&maxheight=938
+* https://element.eleme.io/#/en-US/component/tabs
+
+These two combined are the stretch acp
+
