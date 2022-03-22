@@ -19,12 +19,18 @@ export default {
 @import '~bootstrap/scss/_variables';
 @import '~bootstrap/scss/mixins/_breakpoints';
 
+// .dark {
+// 	@import './assets/_variables';
+// 	@import '~bootstrap/scss/bootstrap';
+// 	@import './assets/_bootswatch';
+// }
+
+// @import '~bootstrap/scss/bootstrap';
+
 .dark {
 	$enable-gradients: true;
 
-	$success: #5cdd8b;
-	$danger: #dc3545;
-	$warning: #f8a306;
+	@import './assets/_variables';
 
 	$theme-colors: (
 		'primary': $primary,
@@ -46,9 +52,6 @@ export default {
 	@each $color, $value in $theme-colors-rgb {
 		--#{$variable-prefix}#{$color}-rgb: #{$value};
 	}
-
-	$body-color: #eeeeee;
-	$body-bg: #0d1117;
 
 	--#{$variable-prefix}body-color: #{$body-color};
 	--#{$variable-prefix}body-bg: #{$body-bg};

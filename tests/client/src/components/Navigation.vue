@@ -1,5 +1,14 @@
 <template>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav
+		:class="{
+			navbar: true,
+			'navbar-expand-lg': true,
+			'navbar-dark': dark,
+			'bg-dark': dark,
+			'navbar-light': !dark,
+			'bg-light': !dark,
+		}"
+	>
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Ticket System</a>
 			<button
@@ -31,10 +40,16 @@
 </template>
 <script>
 export default {
+	data() {
+		return {
+			dark: false,
+		};
+	},
 	methods: {
 		changeTheme() {
-			// darkmode.toggleDarkMode();
+			this.dark = !this.dark;
 			document.body.classList.toggle('dark');
+			// darkmode.toggleDarkMode();
 			// document.documentElement.getAttribute('data-theme') == 'light'
 			// 	? document.documentElement.setAttribute('data-theme', 'dark')
 			// 	: document.documentElement.setAttribute('data-theme', 'light');
