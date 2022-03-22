@@ -33,7 +33,11 @@
 export default {
 	methods: {
 		changeTheme() {
+			// darkmode.toggleDarkMode();
 			document.body.classList.toggle('dark');
+			// document.documentElement.getAttribute('data-theme') == 'light'
+			// 	? document.documentElement.setAttribute('data-theme', 'dark')
+			// 	: document.documentElement.setAttribute('data-theme', 'light');
 		},
 	},
 };
