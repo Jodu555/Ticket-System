@@ -1,32 +1,60 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+	<div id="app">
+		<Navigation />
+		<router-view />
+	</div>
 </template>
 
+<script>
+import Navigation from './components/Navigation.vue';
+export default {
+	components: {
+		Navigation,
+	},
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+
+.dark {
+	$enable-gradients: true;
+
+	$success: #5cdd8b;
+	$danger: #dc3545;
+	$warning: #f8a306;
+
+	$theme-colors: (
+		'primary': $primary,
+		'secondary': $secondary,
+		'success': $success,
+		'danger': $danger,
+		'info': $info,
+		'dark': $dark,
+		'light': #aaa,
+	);
+
+	/* redefine theme color variables */
+	@each $color, $value in $theme-colors {
+		--#{$variable-prefix}#{$color}: #{$value};
+	}
+
+	$theme-colors-rgb: map-loop($theme-colors, to-rgb, '$value');
+
+	@each $color, $value in $theme-colors-rgb {
+		--#{$variable-prefix}#{$color}-rgb: #{$value};
+	}
+
+	$body-color: #eeeeee;
+	$body-bg: #0d1117;
+
+	--#{$variable-prefix}body-color: #{$body-color};
+	--#{$variable-prefix}body-bg: #{$body-bg};
+
+	// @import 'bootstrap';
+	@import '~bootstrap/scss/bootstrap';
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+@import '~bootstrap/scss/bootstrap';
 </style>
