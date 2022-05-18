@@ -17,7 +17,12 @@
 			</li>
 		</ul>
 		<div style="height: 85vh" class="py-4 container" id="ticketList">
-			<table class="table table-hover">
+			<table
+				:class="{
+					table: true,
+					'table-dark': dark,
+				}"
+			>
 				<thead>
 					<tr>
 						<th scope="col">#ID</th>
@@ -45,6 +50,12 @@
 	</div>
 </template>
 <script>
-export default {};
+export default {
+	data() {
+		return {
+			dark: true,
+		};
+	},
+};
 </script>
 <style lang="scss"></style>
