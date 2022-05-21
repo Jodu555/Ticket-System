@@ -34,17 +34,13 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<th scope="row"><a href="#">#1254</a></th>
+					<tr v-for="ticket in tickets">
+						<th scope="row">
+							<a href="#">#{{ ticket.ID }}</a>
+						</th>
 						<td>Bug</td>
 						<td>Otto</td>
 						<td>@mdo</td>
-					</tr>
-					<tr>
-						<th scope="row"><a href="">#4897</a></th>
-						<td>Anfrage</td>
-						<td>Thornton</td>
-						<td>@fat</td>
 					</tr>
 				</tbody>
 			</table>
@@ -58,7 +54,22 @@ import { mapState, mapMutations } from 'vuex';
 export default {
 	components: { TicketView },
 	data() {
-		return {};
+		return {
+			tickets: [
+				{
+					ID: 1245,
+					categorie: 'Fehler',
+					userTags: ['Wichtig'],
+					internalTags: ['Eher Wichtig'],
+				},
+				{
+					ID: 4897,
+					categorie: 'Feature Request',
+					userTags: ['Eher Wichtig'],
+					internalTags: ['Nicht Wichtig'],
+				},
+			],
+		};
 	},
 	computed: {
 		...mapState('tm', ['openedTabs', 'currentViewed']),
