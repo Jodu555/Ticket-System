@@ -67,13 +67,13 @@
 				</tbody>
 			</table>
 		</div>
-		<div v-else>
-			<h1>Ticket: #{{ view }}</h1>
-		</div>
+		<TicketView v-else />
 	</div>
 </template>
 <script>
+import TicketView from '@/components/TicketView.vue';
 export default {
+	components: { TicketView },
 	data() {
 		return {
 			tabs: [1254, 4897],
