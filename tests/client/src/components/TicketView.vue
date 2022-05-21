@@ -7,9 +7,11 @@
 			</div>
 			<div class="col-1" style="width: 2.333333%"></div>
 			<div class="col-3">
-				<div class="h-25 shadow-sm p-3 mb-5 bg-body rounded">
+				<div class="h-30 shadow-sm p-3 mb-5 bg-body rounded">
 					<h3 class="justify-content-center text-center">Informationen</h3>
 					<div class="row">
+						<dt class="col-sm-4">Ticket:</dt>
+						<dd class="col-sm-8">#456</dd>
 						<dt class="col-sm-4">Kategorie:</dt>
 						<dd class="col-sm-8">Fehler</dd>
 						<dt class="col-sm-4">N-Tags:</dt>

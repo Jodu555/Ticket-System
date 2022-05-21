@@ -5,20 +5,20 @@
 				<a
 					:class="{
 						'nav-link': true,
-						active: view == '',
+						active: currentViewed.ID == -1,
 					}"
-					@click="changeView('')"
+					@click="setCurrentViewedID(-1)"
 					href="#"
 					>Liste</a
 				>
 			</li>
-			<li v-for="tab in tabs" class="nav-item">
+			<li v-for="tab in openedTabs" class="nav-item">
 				<span
 					:class="{
 						'nav-link': true,
-						active: view == tab,
+						active: currentViewed.ID == tab.ID,
 					}"
-					><a href="#" @click="changeView(tab)">Ticket #{{ tab }}</a>
+					><a href="#" @click="setCurrentViewedID(tab.ID)">Ticket #{{ tab.ID }}</a>
 					<a href="#del" class="btn-close del">&times;</a></span
 				>
 			</li>
@@ -36,7 +36,7 @@
 				>
 			</li> -->
 		</ul>
-		<div v-if="view == ''" style="height: 85vh" class="py-4 container" id="ticketList">
+		<div v-if="currentViewed.ID == -1" style="height: 85vh" class="py-4 container" id="ticketList">
 			<table
 				:class="{
 					table: true,
@@ -72,15 +72,20 @@
 </template>
 <script>
 import TicketView from '@/components/TicketView.vue';
+import { mapState, mapMutations } from 'vuex';
 export default {
 	components: { TicketView },
 	data() {
 		return {
-			tabs: [1254, 4897],
-			view: '',
+			// tabs: [1254, 4897],
+			// view: '',
 		};
 	},
+	computed: {
+		...mapState('tm', ['openedTabs', 'currentViewed']),
+	},
 	methods: {
+		...mapMutations('tm', ['setCurrentViewedID']),
 		changeView(view) {
 			this.view = view;
 		},
