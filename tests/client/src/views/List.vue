@@ -2,9 +2,27 @@
 	<div>
 		<ul class="nav nav-tabs" id="tab-list">
 			<li class="nav-item">
-				<a class="nav-link active" @click="changeView('')" href="#">Liste</a>
+				<a
+					:class="{
+						'nav-link': true,
+						active: view == '',
+					}"
+					@click="changeView('')"
+					href="#"
+					>Liste</a
+				>
 			</li>
-			<li class="nav-item">
+			<li v-for="tab in tabs" class="nav-item">
+				<span
+					:class="{
+						'nav-link': true,
+						active: view == tab,
+					}"
+					><a href="#" @click="changeView(tab)">Ticket #{{ tab }}</a>
+					<a href="#del" class="btn-close del">&times;</a></span
+				>
+			</li>
+			<!-- <li class="nav-item">
 				<span class="nav-link"
 					><a href="#" @click="changeView('1254')">Ticket #1254</a>
 					<a href="#del" class="btn-close del">&times;</a></span
@@ -16,7 +34,7 @@
 					><a href="#" @click="changeView('4897')">Ticket #4897</a>
 					<a href="#del" class="btn-close del">&times;</a></span
 				>
-			</li>
+			</li> -->
 		</ul>
 		<div v-if="view == ''" style="height: 85vh" class="py-4 container" id="ticketList">
 			<table
@@ -50,7 +68,7 @@
 			</table>
 		</div>
 		<div v-else>
-			<h1>OTHER</h1>
+			<h1>Ticket: #{{ view }}</h1>
 		</div>
 	</div>
 </template>
@@ -58,7 +76,8 @@
 export default {
 	data() {
 		return {
-			view: '--',
+			tabs: [1254, 4897],
+			view: '',
 		};
 	},
 	methods: {
