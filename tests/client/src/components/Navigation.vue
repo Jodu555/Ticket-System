@@ -25,10 +25,10 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item">
-						<router-link class="nav-link active" to="/">Dashboard</router-link>
+						<router-link class="nav-link" exact-active-class="active" to="/">Dashboard</router-link>
 					</li>
 					<li class="nav-item">
-						<router-link class="nav-link" to="/list">Liste</router-link>
+						<router-link class="nav-link" exact-active-class="active" to="/list">Liste</router-link>
 					</li>
 				</ul>
 				<div class="d-flex">

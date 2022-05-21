@@ -24,9 +24,15 @@ export default {
                 state.currentViewed = state.openedTabs.find(v => v.ID == ID);
             }
         },
-        setOpenedTabs(state, openedTabs) {
-            state.openedTabs = openedTabs;
+        closeCurrentViewedID(state, ID) {
+            state.openedTabs = state.openedTabs.filter(v => v.ID !== ID)
+            if (state.currentViewed.ID == ID) {
+                state.currentViewed = { ID: -1 };
+            }
         },
+        openTicket(state, ID) {
+
+        }
     },
     actions: {
 
