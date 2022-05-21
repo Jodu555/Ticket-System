@@ -2,21 +2,23 @@
 	<div>
 		<ul class="nav nav-tabs" id="tab-list">
 			<li class="nav-item">
-				<a class="nav-link active" href="#">Liste</a>
+				<a class="nav-link active" @click="changeView('')" href="#">Liste</a>
 			</li>
 			<li class="nav-item">
 				<span class="nav-link"
-					><a href="#">Ticket #1254</a> <a href="#del" class="btn-close del">&times;</a></span
+					><a href="#" @click="changeView('1254')">Ticket #1254</a>
+					<a href="#del" class="btn-close del">&times;</a></span
 				>
 			</li>
 
 			<li class="nav-item">
 				<span class="nav-link"
-					><a href="#">Ticket #4897</a> <a href="#del" class="btn-close del">&times;</a></span
+					><a href="#" @click="changeView('4897')">Ticket #4897</a>
+					<a href="#del" class="btn-close del">&times;</a></span
 				>
 			</li>
 		</ul>
-		<div style="height: 85vh" class="py-4 container" id="ticketList">
+		<div v-if="view == ''" style="height: 85vh" class="py-4 container" id="ticketList">
 			<table
 				:class="{
 					table: true,
@@ -47,14 +49,22 @@
 				</tbody>
 			</table>
 		</div>
+		<div v-else>
+			<h1>OTHER</h1>
+		</div>
 	</div>
 </template>
 <script>
 export default {
 	data() {
 		return {
-			dark: false,
+			view: '--',
 		};
+	},
+	methods: {
+		changeView(view) {
+			this.view = view;
+		},
 	},
 };
 </script>
