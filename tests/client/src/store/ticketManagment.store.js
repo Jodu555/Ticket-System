@@ -10,19 +10,37 @@ export default {
                 ID: 1245,
                 categorie: 'Fehler',
                 userTags: ['Wichtig'],
-                internalTags: ['Eher Wichtig']
+                internalTags: ['Eher Wichtig'],
+                user: {
+                    username: 'TRyFlow',
+                    email: 'TRyFlow_at@gmail.com'
+                },
+                created_at: 1608850860066,
+                updated_at: 1653213986533
             },
             {
                 ID: 1277,
                 categorie: 'Bug Report',
                 userTags: ['Sehr Wichtig'],
-                internalTags: ['Nicht Wichtig']
+                internalTags: ['Nicht Wichtig'],
+                user: {
+                    username: 'Jodu555',
+                    email: 'Jodu505@gmail.com'
+                },
+                created_at: 1608850808500,
+                updated_at: 1653213986533
             },
             {
                 ID: 4897,
                 categorie: 'Feature Request',
                 userTags: ['Eher Wichtig'],
-                internalTags: ['Nicht Wichtig']
+                internalTags: ['Nicht Wichtig'],
+                user: {
+                    username: 'Jodu555',
+                    email: 'Jodu505@gmail.com'
+                },
+                created_at: 1608850805555,
+                updated_at: 1653213986533
             }
         ]
     },

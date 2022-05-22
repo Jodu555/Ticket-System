@@ -28,9 +28,9 @@
 				<thead>
 					<tr>
 						<th scope="col">#ID</th>
-						<th scope="col">Typ</th>
-						<th scope="col">Last</th>
-						<th scope="col">Handle</th>
+						<th scope="col">Category</th>
+						<th scope="col">User</th>
+						<th scope="col">Created At</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -40,9 +40,9 @@
 								>#{{ ticket.ID }}</a
 							>
 						</th>
-						<td>Bug</td>
-						<td>Otto</td>
-						<td>@mdo</td>
+						<td>{{ ticket.categorie }}</td>
+						<td>{{ ticket.user.username }}</td>
+						<td>{{ new Date(ticket.created_at).toLocaleString() }}</td>
 					</tr>
 				</tbody>
 			</table>
