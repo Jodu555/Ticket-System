@@ -27,6 +27,9 @@ export default {
         ]
     },
     mutations: {
+        setOpenedTabs(state, openedTabs) {
+            state.openedTabs = openedTabs;
+        },
         setCurrentViewedID(state, ID) {
             if (ID == -1) {
                 state.currentViewed = { ID: -1 };
@@ -40,12 +43,21 @@ export default {
                 state.currentViewed = { ID: -1 };
             }
         },
-        openTicket(state, ID) {
-
-        }
     },
     actions: {
+        openTicket({ commit, state }, { event, ID }) {
+            if (state.openedTabs.includes(ID)) {
+                //Ticket already opened!
+                if (!event.ctrlKey)
+                    commit('setCurrentViewedID', ID)
+                return;
+            }
+            commit('setOpenedTabs', [...state.openedTabs, ID]);
 
+            if (!event.ctrlKey) {
+                commit('setCurrentViewedID', ID)
+            }
+        },
     },
     namespaced: true,
 }

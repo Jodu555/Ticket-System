@@ -36,7 +36,9 @@
 				<tbody>
 					<tr v-for="ticket in loadedTickets">
 						<th scope="row">
-							<a href="#">#{{ ticket.ID }}</a>
+							<a href="#" @click.prevent="(event) => openTicket({ event, ID: ticket.ID })"
+								>#{{ ticket.ID }}</a
+							>
 						</th>
 						<td>Bug</td>
 						<td>Otto</td>
@@ -50,7 +52,7 @@
 </template>
 <script>
 import TicketView from '@/components/TicketView.vue';
-import { mapState, mapMutations } from 'vuex';
+import { mapState, mapMutations, mapActions } from 'vuex';
 export default {
 	components: { TicketView },
 	data() {
@@ -60,7 +62,8 @@ export default {
 		...mapState('tm', ['openedTabs', 'currentViewed', 'loadedTickets']),
 	},
 	methods: {
-		...mapMutations('tm', ['setCurrentViewedID', 'closeCurrentViewedID']),
+		...mapMutations('tm', ['setCurrentViewedID', 'closeCurrentViewedID', 'openTicket']),
+		...mapActions('tm', ['openTicket']),
 	},
 };
 </script>
