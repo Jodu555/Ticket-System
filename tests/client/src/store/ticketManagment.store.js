@@ -6,6 +6,17 @@ export default {
             4897
         ],
         loadedTickets: [
+            // {
+            //     ID: 1245,
+            //     title: 'Image isnt loading',
+            //     category: 'Fehler',
+            //     userTags: ['Wichtig'],
+            //     internalTags: ['Eher Wichtig'],
+            //     creator: 45868,
+            //     participiants: [45868, 7579],
+            //     created_at: 1608850860066,
+            //     updated_at: 1653213986533
+            // },
             {
                 ID: 1245,
                 title: 'Image isnt loading',
@@ -70,6 +81,8 @@ export default {
     },
     actions: {
         openTicket({ commit, state }, { event, ID }) {
+            //TODO: Think about lazy loading the user data
+
             if (state.openedTabs.includes(ID)) {
                 //Ticket already opened!
                 if (!event.ctrlKey)
@@ -81,6 +94,13 @@ export default {
             if (!event.ctrlKey) {
                 commit('setCurrentViewedID', ID)
             }
+        },
+        async loadUsersData({ commit, state }, ID) {
+
+        },
+        async loadTicketList({ commit, state }) {
+            //TODO: This should load all tickets but without any user data
+            // => The User data shall be loaded when a ticket get clicked on
         },
     },
     namespaced: true,
