@@ -11,9 +11,9 @@
 					<h3 class="justify-content-center text-center">Informationen</h3>
 					<div class="row">
 						<dt class="col-sm-4">Ticket:</dt>
-						<dd class="col-sm-8">#456</dd>
+						<dd class="col-sm-8">#{{ currentViewed.ID }}</dd>
 						<dt class="col-sm-4">Kategorie:</dt>
-						<dd class="col-sm-8">Fehler</dd>
+						<dd class="col-sm-8">{{ currentViewed.category }}</dd>
 						<dt class="col-sm-4">N-Tags:</dt>
 						<dd class="col-sm-8">
 							<span class="badge rounded-pill bg-danger">Wichtig</span>
@@ -33,7 +33,9 @@
 					<h3 class="text-center">Nutzer Informationen</h3>
 					<div class="row">
 						<dt class="col-sm-4">Name:</dt>
-						<dd class="col-sm-8">Jodu555 <a href="#id">#4589</a></dd>
+						<dd class="col-sm-8">
+							{{ currentViewed.user.username }} <a href="#id">#{{ currentViewed.user.ID }}</a>
+						</dd>
 					</div>
 				</div>
 				<div style="height: 63% !important" class="shadow-sm p-3 mb-5 bg-body rounded">
@@ -65,6 +67,12 @@
 	</div>
 </template>
 <script>
-export default {};
+import { mapState } from 'vuex';
+export default {
+	name: 'TicketView',
+	computed: {
+		...mapState('tm', ['currentViewed']),
+	},
+};
 </script>
 <style lang=""></style>

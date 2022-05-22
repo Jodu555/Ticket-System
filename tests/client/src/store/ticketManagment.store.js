@@ -8,10 +8,12 @@ export default {
         loadedTickets: [
             {
                 ID: 1245,
-                categorie: 'Fehler',
+                title: 'Image isnt loading',
+                category: 'Fehler',
                 userTags: ['Wichtig'],
                 internalTags: ['Eher Wichtig'],
                 user: {
+                    ID: 7579,
                     username: 'TRyFlow',
                     email: 'TRyFlow_at@gmail.com'
                 },
@@ -20,10 +22,12 @@ export default {
             },
             {
                 ID: 1277,
-                categorie: 'Bug Report',
+                title: 'The title wont show correctly for me',
+                category: 'Bug Report',
                 userTags: ['Sehr Wichtig'],
                 internalTags: ['Nicht Wichtig'],
                 user: {
+                    ID: 4589,
                     username: 'Jodu555',
                     email: 'Jodu505@gmail.com'
                 },
@@ -32,10 +36,12 @@ export default {
             },
             {
                 ID: 4897,
-                categorie: 'Feature Request',
+                title: 'Implement an notification system',
+                category: 'Feature Request',
                 userTags: ['Eher Wichtig'],
                 internalTags: ['Nicht Wichtig'],
                 user: {
+                    ID: 4589,
                     username: 'Jodu555',
                     email: 'Jodu505@gmail.com'
                 },

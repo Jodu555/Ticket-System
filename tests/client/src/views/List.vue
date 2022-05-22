@@ -40,7 +40,7 @@
 								>#{{ ticket.ID }}</a
 							>
 						</th>
-						<td>{{ ticket.categorie }}</td>
+						<td>{{ ticket.category }}</td>
 						<td>{{ ticket.user.username }}</td>
 						<td>{{ new Date(ticket.created_at).toLocaleString() }}</td>
 					</tr>
