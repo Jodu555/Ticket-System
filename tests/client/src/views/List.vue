@@ -29,6 +29,7 @@
 					<tr>
 						<th scope="col">#ID</th>
 						<th scope="col">Category</th>
+						<th scope="col">Titel</th>
 						<th scope="col">User</th>
 						<th scope="col">Created At</th>
 					</tr>
@@ -41,6 +42,7 @@
 							>
 						</th>
 						<td>{{ ticket.category }}</td>
+						<td>{{ ticket.title }}</td>
 						<td>{{ ticket.user.username }}</td>
 						<td>{{ new Date(ticket.created_at).toLocaleString() }}</td>
 					</tr>

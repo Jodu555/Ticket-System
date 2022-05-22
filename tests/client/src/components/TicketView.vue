@@ -36,6 +36,10 @@
 						<dd class="col-sm-8">
 							{{ currentViewed.user.username }} <a href="#id">#{{ currentViewed.user.ID }}</a>
 						</dd>
+						<dt class="col-sm-4">E-Mail:</dt>
+						<dd class="col-sm-8">
+							{{ currentViewed.user.email }}
+						</dd>
 					</div>
 				</div>
 				<div style="height: 63% !important" class="shadow-sm p-3 mb-5 bg-body rounded">
