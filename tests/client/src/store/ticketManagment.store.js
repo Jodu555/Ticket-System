@@ -2,8 +2,6 @@ export default {
     state: {
         currentViewed: { ID: -1 },
         openedTabs: [
-            1245,
-            4897
         ],
         loadedTickets: [
             // {

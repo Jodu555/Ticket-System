@@ -40,10 +40,9 @@ export default {
 		return {};
 	},
 	computed: {
-		...mapState('tm', ['openedTabs', 'currentViewed', 'loadedTickets']),
+		...mapState('tm', ['currentViewed', 'loadedTickets']),
 	},
 	methods: {
-		...mapMutations('tm', ['setCurrentViewedID', 'closeCurrentViewedID']),
 		...mapActions('tm', ['openTicket']),
 	},
 };
