@@ -31,8 +31,8 @@
 	</div>
 </template>
 <script>
+import { mapState, mapActions } from 'vuex';
 import TicketView from '@/components/ticketView/TicketView.vue';
-import { mapState, mapMutations, mapActions } from 'vuex';
 import TicketTabs from '@/components/ticketView/TicketTabs.vue';
 export default {
 	components: { TicketView, TicketTabs },
